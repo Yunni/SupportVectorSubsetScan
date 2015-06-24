@@ -6,4 +6,4 @@ Support Vector Subset Scan is an unsurpervised machine learning algorithm to det
 
 (2)    Please run main.m using Matlab or Octave
 
-(3)    Open main.m and the parameters are all in the “options”
+(3)    Open main.m and try different strings and parameters
