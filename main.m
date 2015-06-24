@@ -4,7 +4,7 @@ rng(1)
 disp('Visualize the dataset. Press any key to continue...')
 
 disp('Running LTSS and SVM...')
-%svm(X, count, 5, 1000)
+svm(X, count, 5, 1000)
 disp('Press any key to continue...')
 
 disp('Running Support Vector Subset Scan')
