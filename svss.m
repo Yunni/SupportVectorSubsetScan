@@ -24,7 +24,7 @@ function [label] = svss(X, count, gamma, C0, C1)
     end
     
     % Use SVM to learn the decision boundry
-    cl = fitcsvm(X,label,'KernelFunction','rbf', 'KernelScale', gamma,'BoxConstraint',C,'ClassNames',[-1,1]);
+    cl = fitcsvm(X,label,'KernelFunction','rbf', 'KernelScale', 5,'BoxConstraint',1000,'ClassNames',[-1,1]);
     plot_svm( X, label, cl)
     
 end

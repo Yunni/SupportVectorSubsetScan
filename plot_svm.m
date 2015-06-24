@@ -7,7 +7,7 @@ function [ ] = plot_svm( X, label, cl)
     xGrid = [x1Grid(:),x2Grid(:)];
     [~,scores] = predict(cl,xGrid);
 
-    h(1:2) = gscatter(X(:,1),X(:,2),label,'bc','.');
+    h(1:2) = gscatter(X(:,1),X(:,2),label,'cb','.');
     hold on
     contour(x1Grid,x2Grid,reshape(scores(:,2),size(x1Grid)), [0, 0],'k');
     legend(h,{'Negative','Positive'});
