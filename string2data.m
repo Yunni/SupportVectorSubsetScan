@@ -21,7 +21,6 @@ function [ X, count, label] = string2data( string, baseline, increment )
     axis equal
     axis([0, width, 0, height])
     legend('Poisson(120)', 'Possion(100)')
-    pause
     
     label = 2 .* label - 1;
 

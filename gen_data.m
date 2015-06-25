@@ -6,8 +6,7 @@ function [ X, count ] = gen_data( num_data, baseline, increment )
 
     % Plot the dataset
     plot(X(in_region(X), 1), X(in_region(X), 2), 'b.', X(~in_region(X), 1), X(~in_region(X), 2), 'c.')
-    legend('Poisson(125)', 'Possion(100)')
-    pause
-
+    legend('Poisson(120)', 'Possion(100)'
+    
 end
 
