@@ -14,6 +14,6 @@ function [ ] = plot_svm( X, label, cl)
     axis equal
     axis([0, max(X(:,1)), 0, max(X(:,2))])
     hold off
-    pause
+    pause(1)
 
 end    

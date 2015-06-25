@@ -1,5 +1,7 @@
+clear
+
 % Generate a dataset 
-rng(1)
+rng(2)
 [X, count, truth] = string2data( 'World', 100, 20);%[X, count] = gen_data(n, 100, 20);
 disp('Visualize the dataset. Press any key to continue...')
 
