@@ -1,4 +1,4 @@
-function [ ] = plot_svm( X, label, cl)
+function [ spatial_label ] = plot_svm( X, label, cl)
 % Plot the the result of SVM
 
 % Plot the data and the decision boundary
@@ -14,5 +14,8 @@ function [ ] = plot_svm( X, label, cl)
     axis equal
     axis([0, max(X(:,1)), 0, max(X(:,2))])
     hold off
+    
+ % Compute the spatial label
+    spatial_label = predict(cl,X);
 
 end    
