@@ -1,4 +1,4 @@
-function [label] = svss(X, count, gamma, C0, C1)
+function [label, spatial_label] = svss(X, count, gamma, C0, C1)
 % Run support vector subset scan algorithm.
 
     n = size(X, 1);
@@ -8,7 +8,7 @@ function [label] = svss(X, count, gamma, C0, C1)
     options.gamma = gamma;
     options.C0 = C0;
     options.C1 = C1;
-    options.C = options.C1 ./ options.C0;
+    options.C = options.C1 ./ (2 * options.C0);
 
     % Alternatively optimize the model
     delta = zeros(n, 1);
@@ -18,7 +18,7 @@ function [label] = svss(X, count, gamma, C0, C1)
         last_obj = obj;
         label = ltss(count, options.C1 * delta);
         [delta, model, fval] = support_vector(X, label, options);
-        plot_svss(X, label, model)
+        spatial_label = plot_svm(X, label, model);
         obj = f(count(label==1,:), 0) + options.C0 * fval;
         pause(1)
     end

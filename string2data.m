@@ -20,7 +20,7 @@ function [ X, count, label] = string2data( string, baseline, increment )
     plot(X(label==1, 1), X(label==1, 2), 'b.', X(label==0, 1), X(label==0, 2), 'c.')
     axis equal
     axis([0, width, 0, height])
-    legend('Poisson(120)', 'Possion(100)')
+    legend('Poisson(115)', 'Possion(100)')
     
     label = 2 .* label - 1;
 
