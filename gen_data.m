@@ -8,7 +8,7 @@ function [ X, count, truth ] = gen_data( num_data, baseline, increment )
     % Plot the dataset
     plot(X(in_region(X), 1), X(in_region(X), 2), 'b.', X(~in_region(X), 1), X(~in_region(X), 2), 'c.')
     axis equal
-    axis([min(X(:,1)), max(X(:,1)), min(X(:,1)), max(X(:,2))])
+    axis([min(X(:,1)), max(X(:,1)), min(X(:,2)), max(X(:,2))])
     legend('Poisson(120)', 'Possion(100)')
     
 end

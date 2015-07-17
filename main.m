@@ -16,7 +16,7 @@ function main(string)
     
     % Run Support Vector Subset Scan
     disp('Running Support Vector Subset Scan')
-    [label, spatial_label] = svss(X, count, 5, 0.0005, 2);
+    [label, spatial_label] = svss(X, count, 5, 2000, 1000);
     fprintf('Accuracy:%f\n', sum(label==truth) ./ n)
     fprintf('Spatial Accuracy:%f\n', sum(spatial_label==truth) ./ n)
 end

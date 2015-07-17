@@ -3,7 +3,7 @@ function [ delta, model, fval ] = support_vector( X, label, options)
 % undetected data points
 % Return delta(bonus/penalty for all data points), model(model opject)
    
-    model = fitcsvm(X,label,'KernelFunction','rbf', 'KernelScale', options.gamma,'BoxConstraint',options.C);
+    model = fitcsvm(X,label,'KernelFunction','rbf', 'KernelScale', options.gamma,'BoxConstraint',options.C0);
     [~, Score] = predict(model,X);
     xi = Score(:, 2);
     delta = (xi > -1) .* (xi + 1) + (xi < 1) .* (xi - 1);

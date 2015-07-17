@@ -12,7 +12,7 @@ function [ spatial_label ] = plot_svm( X, label, cl)
     contour(x1Grid,x2Grid,reshape(scores(:,2),size(x1Grid)), [0, 0],'k');
     legend(h,{'Negative','Positive'});
     axis equal
-    axis([min(X(:,1)), max(X(:,1)), min(X(:,1)), max(X(:,2))])
+%    axis([min(X(:,1)), max(X(:,1)), min(X(:,1)), max(X(:,2))])
     hold off
     
  % Compute the spatial label
