@@ -17,10 +17,6 @@ function [label, spatial_label] = svss(X, count, gamma, C0, C1)
     while abs(last_obj - obj) > 10 ^ -7
         last_obj = obj;
         label = ltss(count, options.C * delta);
-        if count(label==1,:) <= 0
-            printf('No sites are abnormal!\n');
-            break
-        end
         [delta, model, fval] = support_vector(X, label, options);
         spatial_label = plot_svm(X, label, model);
         obj = fval - options.C1 .* f(count(label==1,:), 0);
